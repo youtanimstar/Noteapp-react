@@ -1,0 +1,78 @@
+:root{
+    --black: #242423;
+    --balck-2: #333533;
+    --yellow: #F5CB5C;
+    --white: #E8EDDF;
+    --white-gray: #CFDBD5;
+}
+
+.sidebar{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.searchSection{
+    background-color: var(--balck-2);
+    padding: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.searchSection .searchInput{
+    padding: 8px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    /* background-color: var(--black); */
+    background-color: transparent;
+    color: var(--white);
+}
+.searchSection .searchInput:focus{
+    outline: none;
+
+}
+.plusBox{
+    padding: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all 0.2s linear;
+}
+.plusBox:hover{
+    background-color: var(--white);
+}
+.plus{
+    
+    font-size: 25px;
+    color: var(--white);
+    transition: all 0.2s linear;
+    
+}
+.plusBox:hover .plus{
+    color: var(--balck-2);
+}
+
+.notesSection{
+    width: 100%;
+    overflow-y: scroll;
+    height: 90vh;
+    overflow-x: hidden;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.notesSection::-webkit-scrollbar{
+    display: none;
+}

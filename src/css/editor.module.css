@@ -1,0 +1,135 @@
+.editor{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+
+}
+:root{
+    --black: #242423;
+    --balck-2: #333533;
+    --yellow: #F5CB5C;
+    --white: #E8EDDF;
+    --white-gray: #CFDBD5;
+    --white-gray-2: #737373;
+}
+.title{
+    width: 100%;
+    padding: 10px;
+    font-size: 40px;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 800;
+    letter-spacing: 2px;
+    caret-color: var(--yellow);
+}
+.title:focus{
+    outline: none;
+    
+}
+
+.hr{
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-gray-2);
+    margin-bottom: 30px;
+}
+.textarea{
+    width: 100%;
+    height: 78vh;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    caret-color: var(--yellow);
+    resize: none;
+    /* scroll-behavior: smooth; */
+    
+    
+}
+.textarea:focus{
+    outline: none;
+}
+/* .textarea{
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    background-color: var(--balck-2);
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    color: var(--white);
+    caret-color: var(--yellow);
+    resize: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+} */
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--black);
+    background: var(--yellow);
+  }
+  
+  ::selection {
+    color: var(--black);
+    background: var(--yellow);
+  }
+
+/*
+ *  STYLE 2
+ */
+
+ ::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+     background-color: var(--white-gray-2);
+     width: 5px;
+     cursor: pointer;
+ }
+ 
+ ::-webkit-scrollbar
+ {
+     width: 12px;
+     background-color: var(--white-gray-2);
+     width: 5px;
+     cursor: pointer;
+
+ }
+ 
+ ::-webkit-scrollbar-thumb
+ {
+     border-radius: 10px;
+     background-color: var(--yellow);
+     width: 5px;
+     cursor: pointer;
+ }
+
+ .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+ }
+ .button{
+    padding: 15px 10px;
+    font-size: 25px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background-color: var(--balck-2);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+ }
+ .button:hover{
+    background-color: var(--white);
+    color: var(--balck-2);
+ }

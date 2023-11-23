@@ -1,0 +1,74 @@
+:root{
+    --black: #242423;
+    --balck-2: #333533;
+    --yellow: #F5CB5C;
+    --white: #E8EDDF;
+    --white-gray: #CFDBD5;
+    --white-gray-2: #565656;
+}
+.wrapper{
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--balck-2);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.notes{
+    width: 300px;
+    height: 60px;
+    /* border-radius: 10px; */
+    /* background-color: red; */
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+.notes:hover{
+    background-color: var(--white-gray-2);
+}
+.notes .notesTitle{
+    width: 100%;
+    overflow: hidden;
+    /* height: 50px; */
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 25px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    /* background-color: red; */
+}
+.notes .notesTitle:focus{
+    outline: none;
+}
+.dropdownButton{
+    height: 100%;
+    width: 40px;
+    background-color: transparent;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: all 0.2s linear;
+    position: relative;
+}
+.dropdownButton:hover{
+    background-color: var(--white);
+}
+.dropdownButton:hover .dropdown{
+    color: var(--black);
+}
+.dropdownButton .dropdown{
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 800;
+    transition: all 0.2s linear;
+}
