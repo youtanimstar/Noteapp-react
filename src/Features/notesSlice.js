@@ -1,20 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  note: [
-    // {
-    //   id: Date.now(),
-    //   title: "lorem Ipsam dolor",
-    //   description:
-    //     "Now, your React app is set up with Redux. You can dispatch actions, update the state, and connect components to the Redux store as needed. Adjust the file and folder structure based on the complexity of your application.",
-    // },
-  ],
+  note: [],
   currentNote: {
     id: Date.now(),
     title: "",
     description: "",
   },
-  // currentID: Date.now(),
 };
 
 const notesSlice = createSlice({
@@ -24,7 +16,6 @@ const notesSlice = createSlice({
     addNote: (state,action)=>{
         const data = {
             id: Date.now(),
-            // id: action.payload.id,
             title: action.payload.title,
             description: action.payload.description,
         }
@@ -40,18 +31,15 @@ const notesSlice = createSlice({
     updateNote: (state,action)=>{
         state.note = state.note.map((ele)=>ele.id===action.payload.id?ele=action.payload:ele);
     },
-    // filterNote: (state,action)=>{
-    //     state.note = state.note.filter((ele)=>ele.title.toLowerCase().includes(action.payload.toLowerCase()));
-    // },
     setCurrentNote: (state,action)=>{
         const ele = state.note.filter((ele)=>ele.id===action.payload);
         state.currentNote = ele[0];    
     },
-    getAllData: (state)=>{
-      state.note=JSON.parse(localStorage.getItem("note"));
+    getAllData: (state,action)=>{
+      state.note = action.payload;
     },
-    setAllData: (state,action)=>{
-      localStorage.setItem("note",JSON.stringify(state.note));
+    setAllData: (action)=>{
+      localStorage.setItem("note",JSON.stringify(action.payload));
     }
   }
 });

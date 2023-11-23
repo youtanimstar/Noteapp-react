@@ -16,7 +16,7 @@ const Editor = () => {
 
   const handleChange = (name,e)=>{
     setData((prev)=>({...prev,[name]:e.target.value}));
-    console.log(data);
+    // console.log(data);
     
   }
 

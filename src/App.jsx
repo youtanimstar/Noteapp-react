@@ -4,16 +4,19 @@ import Style from "./css/index.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { setAllData, getAllData } from './Features/notesSlice';
 
+let list = JSON.parse(localStorage.getItem("note"));
+
 function App() {
   useEffect(()=>{
     window.onload = function(){
-      dispatch(getAllData());
+      dispatch(getAllData(list));
+      
     }
   })
   const note = useSelector(state=>state.note);
   const dispatch = useDispatch();
   useEffect(()=>{
-    dispatch(setAllData())
+    localStorage.setItem("note",JSON.stringify(note));
   },[note]);
   
 

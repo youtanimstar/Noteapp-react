@@ -16,7 +16,7 @@ const Sidebar = () => {
       title: input,
       description: "",
     }
-    console.log(data);
+    // console.log(data);
     // setInput("");
     dispatch(addNote(data));
     setInput("");
